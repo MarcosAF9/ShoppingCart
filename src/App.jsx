@@ -1,7 +1,9 @@
+import Header from "./components/Header/Header";
+
 function App() {
   return (
     <>
-      <h2>oi</h2>
+      <Header />
     </>
   );
 }
