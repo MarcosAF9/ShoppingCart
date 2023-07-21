@@ -16,8 +16,6 @@ const Products = () => {
     });
   }, []);
 
-  console.log(products);
-
   return (
     (loading && <Loading />) || (
       <section className={styles.products}>
