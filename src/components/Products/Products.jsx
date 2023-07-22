@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import fetchProducts from "../../api/fetchProducts";
 import styles from "./products.module.css";
 import ProductCard from "../ProductCard/ProductCard";
-import formatCurrency from "../../utils/formatCurrency";
 import Loading from "../Loading/Loading";
 import AppContext from "../../context/AppContext";
 
@@ -22,9 +21,10 @@ const Products = () => {
         {products.map((product) => (
           <ProductCard
             key={product.id}
+            id={product.id}
             title={product.title}
-            price={formatCurrency(product.price, product.currency_id)}
-            thumb={product.thumbnail}
+            price={product.price}
+            thumbnail={product.thumbnail}
           />
         ))}
       </section>
